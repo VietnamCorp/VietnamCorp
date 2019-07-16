@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="CSS/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="Image/Vietnam-2d.ico" type="image/png">
+    <title>Vietnam</title>
+</head>
+<body id="body" onload="loadWindowFunc()">
+    <div id="PreLoader"><p>Vietnam</p></div>
+    <header id="header">
+        <div class="head">
+            <p class="logo">
+                <a href="index.html">Vietnam</a>
+            </p>
+            <p class="menu">
+            </p>
+            <div id="men" class="men">
+                     <div class="section">
+              <a href="#men" class="menu-btn">
+                <span></span>
+              </a>
+            </div>
+            </div>            
+        </div>
+    </header>
+    <div id="menu-position" class="menu-position">
+        <nav class="menu-list">
+            <a href="index.html" class="link"><img src="Image/home-ico.png" alt="">Главная</a>
+            <a href="#" class="link"><img src="Image/calculator-ico.png" alt="">Калькулятор скоро</a>
+            <a href="VCoin.html" class="link"><img src="Image/Vcoin-ico.png" alt="">Veitnam Coin</a> 
+            <a href="Services.html" class="link"><img src="https://3wsou42v16p23nizfdnrklyt-wpengine.netdna-ssl.com/wp-content/themes/dukeofed/img/icon-service.png" alt="">Услуги</a> 
+        </nav>
+    </div>
+    <div class="slider" id="slider">
+        <span class="slider-top"></span>
+        <p class="slider-info" id="slider-info"></p>   
+        <div class="buttons">
+            <button class="strelka" id="strelka1">&#9668;</button>
+            <span class="slider-p" id="colvo-sliders">1</span>
+            <button class="strelka" id="strelka2">&#9658;</button>
+        </div>
+    </div>
+    <main id="main" class="Optimization">
+        <div id="developers" class="block">
+            <div class="content">
+                <div class="front">
+                    <div class="BI BG-background">
+                        <span class="BI-span1">Калькулятор</span>
+                    </div>
+                    <img src="Image/Calculator.png">
+                    </div> 
+                <div class="back">
+                    <a href="#" id="butInfo1" class="info">Информация</a>
+                    <a href="#" id="butOpen" class="info">Скоро</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="front">
+                    <div class="BI BG-background">
+                        <span class="BI-span2">Blue Guys</span>
+                    </div>
+                    <img src="Image\BG.png">
+                   </div> 
+                <div class="back">
+                    <a href="#" id="butInfo2" class="info">Информация</a>
+                    <a href="https://blueguysinc.github.io/index.html#men" id="butOpen" class="info">Перейти</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="front">
+                    <div class="BI BGPM-background">
+                        <span class="BI-span3">BGPM</span>
+                    </div>
+                    <img src="Image/BGPM.png">
+                    </div> 
+                <div class="back">
+                    <a href="#" id="butInfo3" class="info">Информация</a>
+                    <a href="https://tvoyotec.github.io/" id="butOpen" class="info">Перейти</a>
+
+                </div>
+            </div>
+            <div class="content">
+                <div class="front-Vcoin">
+                    <div class="Vcoin-main">
+                        <span>Vietnam Coin</span>
+                    </div>
+                    <img src="Image/Vcoin.png">
+                    </div> 
+                <div class="Vcoin-back">
+                    <a href="#" id="butInfo4-Vcoin" class="info-Vcoin">Информация</a>
+                    <a href="VCoin.html" id="butOpen-Vcoin" class="info-Vcoin">Открыть</a>
+                </div>
+            </div>
+        
+        <div class="content">
+                <div class="front">
+                    <div class="BI Service-background">
+                        <span class="BI-span5">Заказать услугу</span>
+                    </div>
+                    <img src="https://st2.depositphotos.com/4398873/7993/v/950/depositphotos_79935768-stock-illustration-screwdriver-technical-repair-service-logo.jpg">
+                    </div> 
+                <div class="back">
+                    <a href="Services.html" id="butOpen" class="info">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('#men').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('menu-btn_active');
+            $('.menu-position').toggleClass('menu-postition_active');
+            $('#main').toggleClass('main_active');
+            $('#main').css("transition", "0.55s");
+            $('#slider').toggleClass('slider-active')
+        });
+        jQuery(document).ready(function(){
+        jQuery(window).scrollTop(0).delay(800);
+        });
+        var btninf1 = document.getElementById("butInfo1"); 
+        var btninf2 = document.getElementById("butInfo2");
+        var btninf3 = document.getElementById("butInfo3");
+        var btninf4 = document.getElementById("butInfo4-Vcoin");
+        btninf1.addEventListener('click', function() {
+            Swal.fire({
+                title: 'Калькулятор',
+                showCloseButton: true,
+                showConfirmButton: false,
+                html:
+                '<p>Компания Vietnam продолжает реализовывать всем известные вещи. В этот раз она положила свой взгляд на калькулятор. Это вполне обычный калькулятор.</p>' +
+                '<a href="#" type="button" class="swal2-confirm swal2-styled my-style" style="display: inline-block; border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);" aria-label="">Скоро</a>',
+                imageUrl: 'Image/Calculator.png',
+                imageHeight: 350,
+            })
+        })
+        btninf2.addEventListener('click', function() {
+            Swal.fire({
+                title: 'Blue Guys',
+                showCloseButton: true,
+                showConfirmButton: false,
+                imageUrl: 'Image/BG.png',
+                html:
+                '<p>Лучший из худших! Сайт Blue Guys является "Torrent трекером". По сравнению с BGPM, функций  стало больше, дизайн улучшен. Поддержка окончена. Хотите чай?</p>' +
+                '<a href="https://blueguysinc.github.io/index.html#men" type="button" class="swal2-confirm swal2-styled my-style" style="display: inline-block; border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);" aria-label="">Перейти</a>',
+                imageHeight: 350,
+            })
+        })
+        btninf3.addEventListener('click', function() {
+            Swal.fire({
+                title: 'Blue Guys Phone Manager',
+                showCloseButton: true,
+                showConfirmButton: false,
+                html:                
+                '<p>Худший из худших! Сайт BGPM создан для помощи в выборе телефона... Мало функций, много багов и ошибок, не удобный и не красивый дизайн. Самая первая разработка. Поддержка окончена.</p>' +
+                '<a href="https://tvoyotec.github.io/" type="button" class="swal2-confirm swal2-styled my-style" style="display: inline-block; border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);" aria-label="">Перейти</a>',
+                imageUrl: 'Image/BGPM.png',
+                imageHeight: 350,
+            })
+        })
+        btninf4.addEventListener('click', function() {
+            Swal.fire({
+                title: 'Vietnam Coin',
+                showCloseButton: true,
+                showConfirmButton: false,
+                html:                
+                '<p>Сделан в память старту VKcoin, механника чуть-чуть отличается. RIP VKcoin</p>' +
+                '<a href="VCoin.html" type="button" class="swal2-confirm swal2-styled my-style" style="display: inline-block; border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);" aria-label="">Открыть</a>',
+                imageUrl: 'Image/VCoin.png',
+                imageHeight: 350,
+            })
+        })
+        let pos = 0;
+        const buttonBack = document.getElementById('strelka1');
+        const buttonNext = document.getElementById('strelka2');      
+        const colvo = document.getElementById('colvo-sliders');
+        const img = document.getElementById('slider');
+        const info = document.getElementById('slider-info');
+
+
+        function slides(){
+            if(pos == 0){
+                info.innerHTML = 'Лучший выбор';
+                colvo.innerHTML = '1';
+                img.style.backgroundImage = 'url("https://st2.depositphotos.com/3867481/11527/v/950/depositphotos_115272168-stock-illustration-best-choice-sticker-best-choice.jpg")';
+            };  
+            if(pos == 1){
+                info.innerHTML = 'Самые дешёвые услуги';
+                colvo.innerHTML = '2';
+                img.style.backgroundImage = 'url("https://st3.depositphotos.com/2274151/12973/v/950/depositphotos_129731348-stock-illustration-low-cost-red-grunge-stamp.jpg")';
+            };
+            if(pos == 2){
+                info.innerHTML = 'Высокие рейтинги';
+                colvo.innerHTML = '3';
+                img.style.backgroundImage = 'url("https://nrchealth.com/wp-content/uploads/2016/12/star-ratings-blog3.png")';
+            };
+            if(pos == 3){
+                info.innerHTML = 'Лучшее качество';
+                colvo.innerHTML = '4';
+                img.style.backgroundImage = 'url("https://simsr.somaiya.edu/upload_file/images20/Outdoor_Sports/5cd511532d7b1.png")';
+            };
+        };
+        function Next(){
+            if(pos < 3){
+                pos = pos + 1;
+            };
+        };
+        function Back(){
+            if(pos > 0){
+                pos = pos - 1;
+            };
+        }
+        slides();
+        buttonNext.addEventListener('click', function(){
+            Next();
+            slides();
+        });
+
+        buttonBack.addEventListener('click', function(){
+            Back();
+            slides();
+        });
+
+    </script>
+    <footer>
+        <div id="footerDate"></div> 
+        <p class="Links" id="Links">Ссылки</p>
+    </footer>
+    <script src="JS\main.js"></script>
+    <script>
+        const now = new Date();
+        const FooterDate = document.getElementById('footerDate');
+        const HeaderTime = document.getElementById('Time');
+        FooterDate.innerHTML = '2017 - ' + now.getFullYear();
+        const links = document.getElementById('Links')
+        links.addEventListener('click', function() {
+            Swal.fire({
+                showCloseButton: true,
+                showConfirmButton: false,
+                html:
+                '<div class="wrapper"><a href="https://vk.com/vietnam_corp" class="links-set">VT</a><a href="https://vk.com/blueguysinc" class="links-set">BG</a></div>',
+                width: 700,
+                imageHeight: 350,
+            });
+        });
+    </script>
+</body>
+</html>

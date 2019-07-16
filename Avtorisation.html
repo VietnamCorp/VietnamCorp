@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Image/Avtorisation.ico" type="image/png">
+    <title>Авторизация</title>
+    <style>
+        .reg{
+           color: #2196f3;
+           text-decoration: none; 
+           font-size: 24px;
+        }
+        .reg:hover{
+            color:rgb(30, 108, 172);
+            cursor: pointer;
+        }
+        body{
+            background: #191b1e;
+        }
+        #button{
+            background: #7e7f81;
+        }
+        #button:hover{
+            background:  #868788;
+        }
+
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8/dist/sweetalert2.all.min.js"></script>
+    <script>
+        function Main() {
+            Swal.fire({
+                title: 'Авторизация',
+                html:
+                    '<p>Введите email:</p>' +
+                    '<input id="swal-email" class="swal2-input">' +
+                    '<p>Введите пароль:</p>' +
+                    '<input id="swal-password" class="swal2-input">'+
+                    '<button id="button" type="button" class="swal2-confirm swal2-styled" style="display: inline-block; border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);" aria-label="">Авторизация</button>',
+                footer: 
+                    '<a href="Registration.html" class="reg">Регистрация</a>',
+                confirmButtonText: 'Войти',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                showConfirmButton: false,
+            })
+        }   
+        Main()
+        function reload(){
+            location.reload()
+        }
+        var password = document.getElementById("swal-password")
+        var email = document.getElementById("swal-email")
+        var btn = document.getElementById("button");
+        btn.addEventListener('click', function() {
+            if (password.value == "" || email.value == ""){
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+
+                Toast.fire({
+                    type: 'error',
+                    title: 'Вы заполнили не все поля',
+                })
+            }
+            setTimeout(reload, 2000);
+        })
+    </script>
+</body>
+</html>

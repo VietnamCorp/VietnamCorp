@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="shortcut icon" href="Image/Avtorisation.ico" type="image/png">
+    <style>
+        body{
+            background: #191b1e;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8/dist/sweetalert2.all.min.js"></script>
+    <script>
+        function Osnova() {
+            Swal.mixin({
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                progressSteps: ['1', '2', '3','4'],
+            }).queue([
+                {
+                    title: 'Регистрация',
+                    text: 'Пройдите быструю и удобную регистрацию'
+                },
+                {
+                    title: 'Введите email',
+                    input: 'email',
+                },
+                {
+                    title: 'Введите пароль',
+                    input: 'password',
+                },
+                {
+                    title: 'Соглашение',
+                    input: 'checkbox',
+                    inputPlaceholder: 'Принимаете <a>пользовательское соглашение</a>',
+                    inputValidator: (result) => {
+                        return !result && 'Вы должны его принять близко к сердцу'
+                    }
+                }
+            ]).then((result) => {
+                if (result.value) {
+                    Swal.fire({
+                        title: 'Готово!',
+                        text: 'Вы зарегестрированы',
+                        confirmButtonText: 'Авторизоваться',
+                        showCancelButton: true,
+                        cancelButtonText: 'Выйти',
+                        type: 'success',
+                    })
+                }
+            })
+        }
+        Osnova()
+                
+    </script>
+</body>
+</html>

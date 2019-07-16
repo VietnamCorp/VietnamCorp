@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="CSS/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="Image/Vietnam-2d.ico" type="image/png">
+    <title>Vietnam</title>
+</head>
+<body id="body" onload="loadWindowFunc()">
+    <div id="PreLoader"><p>Vietnam</p></div>
+    <header id="header">
+        <div class="head">
+            <p class="logo">
+                <a href="index.html">Vietnam</a>
+            </p>
+            <p class="menu">
+            </p>
+            <div id="men" class="men">
+                     <div class="section">
+              <a href="#men" class="menu-btn">
+                <span></span>
+              </a>
+            </div>
+            </div>            
+        </div>
+    </header>
+    <div id="menu-position" class="menu-position">
+        <nav class="menu-list">
+            <a href="index.html" class="link"><img src="Image/home-ico.png" alt="">Главная</a>
+            <a href="#" class="link"><img src="Image/calculator-ico.png" alt="">Калькулятор скоро</a>
+            <a href="VCoin.html" class="link"><img src="Image/Vcoin-ico.png" alt="">Veitnam Coin</a>
+            <a href="Services.html" class="link"><img src="https://3wsou42v16p23nizfdnrklyt-wpengine.netdna-ssl.com/wp-content/themes/dukeofed/img/icon-service.png" alt="">Услуги</a>  
+        </nav>
+    </div>
+    <main id="main" style="display:flex;justify-content: center;align-items: center;">
+        <table class="services">
+            <tr>
+                <td class="services-1 name">Название услуги</td><td class="name">Стоимость</td>
+            </tr>
+            <tr>
+                <td class="services-1">Сделать сайт</td><td>15.000$</td>
+            </tr>
+            <tr>
+                <td class="services-1">Послать в строну символического направления</td><td>Бесплатно</td>
+            </tr>
+        </table>
+        <a href="https://vk.com/vietnam_corp" class="Napisat">Написать</a>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('#men').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('menu-btn_active');
+            $('.menu-position').toggleClass('menu-postition_active');
+            $('#main').toggleClass('main_active');
+            $('#main').css("transition", "0.55s");
+            $('#slider').toggleClass('slider-active')
+        });
+        jQuery(document).ready(function(){
+        jQuery(window).scrollTop(0).delay(800);
+        });
+        var btninf1 = document.getElementById("butInfo1"); 
+        var btninf2 = document.getElementById("butInfo2");
+        var btninf3 = document.getElementById("butInfo3");
+        var btninf4 = document.getElementById("butInfo4-Vcoin");
+    </script>
+    <footer>
+        <div id="footerDate"></div>
+        <p class="Links" id="Links">Ссылки</p> 
+    </footer>
+    <script src="JS\main.js"></script>
+    <script>
+        const now = new Date();
+        const FooterDate = document.getElementById('footerDate');
+        FooterDate.innerHTML = '2017 - ' + now.getFullYear();
+        const links = document.getElementById('Links')
+        links.addEventListener('click', function() {
+            Swal.fire({
+                showCloseButton: true,
+                showConfirmButton: false,
+                html:
+                '<div class="wrapper"><a href="https://vk.com/vietnam_corp" class="links-set">VT</a><a href="https://vk.com/blueguysinc" class="links-set">BG</a></div>',
+                width: 700,
+                imageHeight: 350,
+            })
+        })
+    </script>
+</body>
+</html>
