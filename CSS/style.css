@@ -665,32 +665,32 @@ main{
 }
 @media screen and (max-width:990px){
     header{
-        height: 150px;
+        height: 210px;
     } 
     .logo{
-        font-size: 55px;
+        font-size: 95px;
         margin-top: 30px;
     }
     .menu-btn{
         width: 90px;
         height: 90px;
-        margin-top: 70px;
+        margin-top: 130px;
         margin-right: 70px;
     }
     .menu-btn span{
-        width: 90px;
+        width: 130px;
         transform: translateX(-15px)
     }
     .menu-btn span:before,
     .menu-btn span:after{
-        width: 90px;
+        width: 130px;
         left: 10px;
     }
     .menu-btn span:after{
-        transform: translateY(23px)
+        transform: translateY(33px)
     }
     .menu-btn span:before{
-        transform: translateY(-23px) 
+        transform: translateY(-33px) 
     }
     .menu-btn_active span:before{
         transform: rotate(40deg)
@@ -700,38 +700,40 @@ main{
     }
     .menu-position{
         width: 100vh;
-        height: 1250px;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 70px;
+        margin-top: 65px;
     }
     .menu-list{
         width: 600px;
-        margin-left: 50px;
-        margin-top: -500px;
+        margin-left: 450px;
+        margin-top: -600px;
     }
     .link{
         width: 600px;
-        font-size: 40px;
+        font-size: 60px;
         margin-top: 60px;
     }
     .link img{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
     .slider{
         width: 100vh;
         height: 800px;
+        margin: 0;
+        margin-top: 150px;
     }
     .slider-info{
-        height: 70px;
-        margin-top: 648px;
-        font-size: 50px;
+        height: 80px;
+        margin-top: 600px;
+        font-size: 80px;
     }
     .buttons{
-        margin-top: 717px;
-        height: 85px;
+        margin-top: 680px;
+        height: 120px;
     }
     .slider-top{
         width: 100vh;
@@ -739,7 +741,7 @@ main{
         height: 60px;
     }
     .strelka{
-        font-size: 70px;
+        font-size: 100px;
     }
     .slider-p{
         font-size: 70px;
@@ -760,38 +762,38 @@ main{
         height: inherit;
     }
     .content{
-        width: 350px;
-        height: 350px;
+        width: 450px;
+        height: 450px;
     }
     .front-Vcoin{
-        width: 350px;
-        height: 350px;
+        width: 450px;
+        height: 450px;
     }
     .BI-span3,
     .BI-span1,
     .BI-span2,
     .BI-span5{
-        font-size: 40px;
+        font-size: 50px;
     }
     .BI-span1{
-        left: 39px;
-        top: 140px
+        left: 50px;
+        top: 190px
     }
     .BI-span2{
-        left: 76px;
-        top: 146px;
+        left: 100px;
+        top: 190px;
     }
     .BI-span3{
-        left: 117px;
-        top: 150px;
+        left: 160px;
+        top: 190px;
     }
     .BI-span5{
-        top: 120px;
+        top: 190px;
     }
     .Vcoin-main span{
-        font-size: 35px;
-        left: 50px;
-        top: 144px;
+        font-size: 45px;
+        left: 70px;
+        top: 190px;
     }
     .Vcoin-back{
         width: 350px;
@@ -819,8 +821,8 @@ main{
     }
     footer{
         width: 100vh;
-        height: 150px;
-        font-size: 30px;
+        height: 300px;
+        font-size: 60px;
     }
     .links-set{
         width: 150px;
@@ -835,7 +837,7 @@ main{
     .coin-position{
         width: 100vh;
         margin: 0;
-        margin-top: 160px;
+        margin-top: 400px;
         font-size: 50px;
     }
     .coin-img{
@@ -848,7 +850,7 @@ main{
     .coin-img2{
         width: 1000px;
         height: 1000px;
-        margin-left: -400px;
+        margin-left: -800px;
         margin-top: 150px;
     }
     .boosts{
@@ -875,6 +877,7 @@ main{
     }
     .VKCOIN{
         height: 3100px;
+        margin-top: 150px;
     }
     .services{
         width: 90vh;
@@ -888,7 +891,10 @@ main{
         font-size: 40px;
         line-height: 150px;
         position: absolute;
-        left: 550px;
-        top: 1000px;
+        left: 850px;
+        top: 1300px;
+    }
+    .servicesfooter{
+        margin-top: 1500px;
     }
 }

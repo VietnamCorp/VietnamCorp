@@ -64,7 +64,7 @@
         var btninf3 = document.getElementById("butInfo3");
         var btninf4 = document.getElementById("butInfo4-Vcoin");
     </script>
-    <footer>
+    <footer class="servicesfooter">
         <div id="footerDate"></div>
         <p class="Links" id="Links">Ссылки</p> 
     </footer>
@@ -73,7 +73,7 @@
         const now = new Date();
         const FooterDate = document.getElementById('footerDate');
         FooterDate.innerHTML = '2017 - ' + now.getFullYear();
-        const links = document.getElementById('Links')
+        const links = document.getElementById('Links');
         links.addEventListener('click', function() {
             Swal.fire({
                 showCloseButton: true,
