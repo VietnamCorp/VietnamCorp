@@ -709,9 +709,10 @@ main{
         margin-top: -600px;
     }
     .link{
-        width: 600px;
-        font-size: 60px;
-        margin-top: 60px;
+        width: 650px;
+        font-size: 65px;
+        margin-top: 80px;
+        height: 300px;
     }
     .link img{
         width: 100px;
