@@ -95,7 +95,7 @@ main{
 .block{
     background:#22262e;
     min-height: 600px;
-    width: 1000px;
+    width: 100%;
     align-items: center;
 }
 .content img{
