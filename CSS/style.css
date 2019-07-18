@@ -705,7 +705,7 @@ main{
     }
     .menu-list{
         width: 600px;
-        margin-left: 300px;
+        margin-left: 50px;
         margin-top: -600px;
     }
     .link{
@@ -895,7 +895,7 @@ main{
         margin-top: 1500px;
     }
     .coin-but-pos{
-        margin-left: -800px;
+        margin-left: -700px;
         width: 1050px;
         height: 1050px;
     }
