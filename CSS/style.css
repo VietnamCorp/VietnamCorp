@@ -391,6 +391,7 @@ main{
     display: block;
     width: 400px;
     height: 400px;
+    background-image: url("Image/Vcoin.png");
 }
 .Coin-button:active{
     opacity: 0.5;
@@ -402,10 +403,6 @@ main{
     top: 110px;
     right: 150px;
     display: inline-block;
-}
-.coin-img2{
-    height: 400px;
-    width: 400px;
 }
 .boosts{
     position: inherit;
@@ -708,7 +705,7 @@ main{
     }
     .menu-list{
         width: 600px;
-        margin-left: 450px;
+        margin-left: 300px;
         margin-top: -600px;
     }
     .link{
@@ -896,5 +893,10 @@ main{
     }
     .servicesfooter{
         margin-top: 1500px;
+    }
+    .coin-but-pos{
+        margin-left: -800px;
+        width: 1050px;
+        height: 1050px;
     }
 }
